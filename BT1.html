@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+         
+            width: 75%;
+            margin: auto;
+            
+        }
+        tr, td {
+            border: 2px solid black;
+            text-align: center;           
+        }
+        </style>
+</head>
+<body style="display: block;">
+    <table id="bang">
+    </table>
+
+    <script>
+       
+        let a= document.getElementById("bang").innerHTML;
+        for (let hang = 1; hang< 10; hang++) {
+                a += "<tr>"
+            for ( let cot = 2; cot < 7; cot++) {
+                
+                a += "<td>"+ cot +'*'+ hang+ '='+(hang*cot)+"</td>";
+            }
+            a += "</tr>"
+        }
+
+        document.getElementById("bang").innerHTML= a;
+    </script>
+</body>
+</html>
