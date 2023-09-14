@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" onclick="fc()" value="Chơi" />
+    <script>
+
+          function fc() {
+      let inputNum= +prompt('Enter a number:');
+      let randomNum = Math.floor(Math.random()*inputNum);
+      let guessNum = +prompt('Guess a number:');
+      let count = 1;
+
+      if (randomNum == guessNum) {
+          alert('Xin chúc mừng');
+      } else {
+          if (guessNum > randomNum) {
+              alert('Số bạn vừa nhập lớn hơn');
+          } else {
+              alert('Số bạn vừa nhập nhỏ hơn');
+          }
+
+          while (guessNum!=randomNum) {
+                count++;
+                guessNum = +prompt('Enter other number: ');
+              
+              if (count == 3) {
+                alert('Bạn đã đoán quá số lần đoán cho phép');
+                break;
+              }
+          }
+      }
+      }
+    </script>
+  </body>
+</html>

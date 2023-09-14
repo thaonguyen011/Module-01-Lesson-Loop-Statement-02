@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Không khai báo biến sum -> vẫn chạy? -->
+    <script>
+        let a = 0, b=1;
+        document.write('20 số đầu tiên trong dãy fibonacci: <br/>1');
+        for (let i = 1; i < 20; i++) {
+            sum = a +b;
+            a = b;
+            b = sum;
+            document.write('<br/>'+sum );
+        }
+    </script>
+</body>
+</html>
